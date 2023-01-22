@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: black;
+  color: white;
+
+  height: 100vh; /*100% view port heigth, a altura será sempre o máximo*/
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 4.8rem;
+
+  position: fixed;
+  width: 100%;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 125%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.1rem solid rgba(139, 92, 246, 1);
+  background-color: transparent;
+  color: white;
+
+  border-radius: 0.8rem;
+  padding: 1.6rem 2.4rem;
+  gap: 1.2rem;
+}
+
+#form-habits {
+  display: flex;
+  padding: 18.2rem 4.8rem 4.8rem;
+  width: fit-content; /*Encaixe o conteúdo na largura*/
+}
+
+.habits {
+  margin-top: 5.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.habit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 3.2rem;
+}
+
+.days {
+  display: flex;
+  margin-left: 3.2rem;
+  gap: 4.8rem;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.day div {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  line-height: 125%;
+  color: #a1a1aa;
+}
+
+input {
+  appearance: none; /*Para conseguir mexer nas bordas*/
+  -webkit-appearance: none; /*Alguns navegadores precisam ser declarados desta forma*/
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 0.8rem;
+  border: 0.2rem solid #27272a;
+  background: #181818;
+}
+
+input:checked {
+  background: #8b5cf6;
+  border: 0.2rem solid #a78bfa;
+}
+
+/*Se meu dispositivo tiver de 0 até 570 pixels de largura da tela, aplica-se isso aqui*/
+@media (max-width: 35rem) {
+  button div {
+    display: none;
+  }
+}
